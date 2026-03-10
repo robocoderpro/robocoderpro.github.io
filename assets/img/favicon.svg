@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" fill="none">
+  <!-- Background circle -->
+  <circle cx="32" cy="32" r="30" fill="#0A0A0F" stroke="#00F5FF" stroke-width="1.5"/>
+  <!-- Robot head -->
+  <rect x="18" y="16" width="28" height="22" rx="4" fill="none" stroke="#00F5FF" stroke-width="1.5"/>
+  <!-- Eyes -->
+  <rect x="22" y="21" width="7" height="7" rx="1" fill="#00F5FF" opacity="0.9"/>
+  <rect x="35" y="21" width="7" height="7" rx="1" fill="#FF6B00" opacity="0.9"/>
+  <!-- Mouth -->
+  <line x1="24" y1="31" x2="40" y2="31" stroke="#00F5FF" stroke-width="1.5" stroke-linecap="round"/>
+  <!-- Antenna -->
+  <line x1="32" y1="16" x2="32" y2="10" stroke="#00F5FF" stroke-width="1.5"/>
+  <circle cx="32" cy="9" r="2.5" fill="#FF6B00"/>
+  <!-- Body -->
+  <rect x="22" y="40" width="20" height="12" rx="2" fill="none" stroke="#00F5FF" stroke-width="1.2"/>
+  <!-- Neck -->
+  <line x1="32" y1="38" x2="32" y2="40" stroke="#00F5FF" stroke-width="2"/>
+  <!-- Orbit ring -->
+  <ellipse cx="32" cy="32" rx="29" ry="10" fill="none" stroke="#00F5FF" stroke-width="0.6" stroke-dasharray="3 3" opacity="0.4" transform="rotate(-20 32 32)"/>
+  <!-- Ears -->
+  <rect x="13" y="22" width="5" height="8" rx="1" fill="none" stroke="#00F5FF" stroke-width="1.2"/>
+  <rect x="46" y="22" width="5" height="8" rx="1" fill="none" stroke="#00F5FF" stroke-width="1.2"/>
+</svg>
