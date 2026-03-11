@@ -83,21 +83,20 @@
     setInterval(updateTime, 1000);
   }
 
-  // ── CountUp Animation ──
-  function animateCountUp(el, target, suffix = '', duration = 2000) {
-    const start = 0;
-    const startTime = performance.now();
-
-    function update(currentTime) {
-      const elapsed = currentTime - startTime;
-      const progress = Math.min(elapsed / duration, 1);
-      const eased = 1 - Math.pow(1 - progress, 3); // ease-out cubic
-      const current = Math.floor(start + (target - start) * eased);
+  // ── CountUp Animation (30ms interval fallback) ──
+  function animateCountUp(el, target, suffix = '') {
+    let current = 0;
+    // Calculate a reasonable increment step based on target size, minimum 1
+    const step = Math.max(1, Math.ceil(target / (2000 / 30)));
+    
+    const interval = setInterval(() => {
+      current += step;
+      if (current >= target) {
+        current = target;
+        clearInterval(interval);
+      }
       el.textContent = current + suffix;
-      if (progress < 1) requestAnimationFrame(update);
-    }
-
-    requestAnimationFrame(update);
+    }, 30);
   }
 
   // ── Trigger CountUp on scroll ──
